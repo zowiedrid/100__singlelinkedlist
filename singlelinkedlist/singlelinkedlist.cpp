@@ -70,6 +70,16 @@ bool searchNode(int nim, Node*& previous, Node*& current) {
     }
 }
 
+bool deleteNode(int nim) {
+    Node* previous;
+    Node* current;
+
+    if (!searchNode(nim, previous, current) == false) {
+        return false;
+        previous->next = current->next;
+    }
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
