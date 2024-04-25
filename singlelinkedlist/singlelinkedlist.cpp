@@ -143,6 +143,37 @@ int main()
             cout << "5. Keluar" << endl;
             cout << "Pilihan: ";
             cin >> pilihan;
+            switch (pilihan)
+            {
+            case 1:
+                addNode();
+                cout << "Node berhasil ditambahkan" << endl;
+                system("pause");
+                system("cls");
+                break;
+            case 2:
+                if (listEmpty())
+                {
+                    cout << "List kosong" << endl;
+                    system("pause");
+                    system("cls");
+                    break;
+                }
+                int nim;
+                cout << "Masukkan NIM yang akan dihapus: ";
+                cin >> nim;
+                if (deleteNode(nim))
+                {
+                    cout << "nim" << nim << "berhasil dihapus" << endl;
+                    system("pause");
+                    system("cls");
+                }
+                else
+                {
+                    cout << "NIM tidak ditemukan" << endl;
+                }
+                break;
+            }
         }
     }
 }
