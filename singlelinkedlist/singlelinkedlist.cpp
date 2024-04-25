@@ -91,6 +91,23 @@ bool listEmpty() {
     }
 }
 
+
+void traverse() {
+    if (listEmpty()) {
+        cout << "List kosong" << endl;
+        system("pause");
+        system("cls");
+        return;
+    }
+    else {
+        Node* current = START;
+        while (current != NULL) {
+            cout << "NIM: " << current->noMhs << ", Nama: " << current->name << endl;
+            currentNode = currentNode->next;
+        }
+    }
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
