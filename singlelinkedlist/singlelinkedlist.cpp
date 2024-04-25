@@ -173,9 +173,25 @@ int main()
                     cout << "NIM tidak ditemukan" << endl;
                 }
                 break;
+            case 3:
+                searchNode();
+                break;
+            case 4:
+                traverse();
+                break;
+            case 5:
+                cout << "Keluar" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid" << endl;
+                break;
             }
         }
-    }
+        catch (exception e)
+        {
+            cout << "Terjadi kesalahan: " << e.what() << endl;
+        }
+    } while (pilihan != 5);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
