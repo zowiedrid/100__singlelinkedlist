@@ -50,7 +50,7 @@ void addNode() {
     previous->next = nodeBaru;
 }
 
-bool searchNode(int nim, Node*& previous, Node*& current) {
+bool serachNode(int nim, Node*& previous, Node*& current) {
     previous = START;
     current = START;
 
@@ -74,7 +74,7 @@ bool deleteNode(int nim) {
     Node* previous;
     Node* current;
 
-    if (!searchNode(nim, previous, current) == false)
+    if (!serachNode(nim, previous, current) == false)
         return false;
     previous->next = current->next;
     if (current == START)
@@ -100,9 +100,9 @@ void traverse() {
         return;
     }
     else {
-        Node* current = START;
-        while (current != NULL) {
-            cout << "NIM: " << current->noMhs << ", Nama: " << current->name << endl;
+        Node* currentNode = START;
+        while (currentNode != NULL) {
+            cout << "NIM: " << currentNode->noMhs << ", Nama: " << currentNode->name << endl;
             currentNode = currentNode->next;
         }
     }
