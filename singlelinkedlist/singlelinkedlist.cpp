@@ -133,7 +133,18 @@ void searchNode() {
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int pilihan;
+    do {
+        try {
+            cout << "1. Tambah Node" << endl;
+            cout << "2. Hapus Node" << endl;
+            cout << "3. Cari Node" << endl;
+            cout << "4. Tampilkan Node" << endl;
+            cout << "5. Keluar" << endl;
+            cout << "Pilihan: ";
+            cin >> pilihan;
+        }
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
