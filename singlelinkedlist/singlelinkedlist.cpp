@@ -108,6 +108,29 @@ void traverse() {
     }
 }
 
+void searchNode() {
+    if (listEmpty()) {
+        cout << "List kosong" << endl;
+        system("pause");
+        system("cls");
+        return;
+    }
+    else {
+        int nim;
+        cout << "Masukkan NIM yang dicari: ";
+        cin >> nim;
+        Node* currentNode = START;
+        while (currentNode != NULL) {
+            if (currentNode->noMhs == nim) {
+                cout << "NIM: " << currentNode->noMhs << ", Nama: " << currentNode->name << endl;
+                return;
+            }
+            currentNode = currentNode->next;
+        }
+        cout << "NIM tidak ditemukan" << endl;
+    }
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
